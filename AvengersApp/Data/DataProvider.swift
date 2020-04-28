@@ -44,13 +44,13 @@ class DataProvider {
     
     
     //MARK: Load by:
-    func loadTasksBy(team: AvengerTeam) -> [Avenger] {
+    func loadAvengerBy(team: AvengerTeam) -> [Avenger] {
         return database?.fetchDataBy(team: team.rawValue) as? [Avenger] ?? []
     }
     
     
     //MARK: Delete:
-    func deleteTask(_ avenger: Avenger) {
+    func deleteAvenger(_ avenger: Avenger) {
         database?.delete(data: [avenger])
     }
     

@@ -13,11 +13,16 @@ import CoreData
 class Database {
     // MARK: - Properties
     private let entityAvenger = "Avenger"
-    private let entityAvengerId = "id"
+    private let entityAvengerHero = "hero"
     private let entityAvengerName = "name"
     private let entityAvengerTeam = "team"
     private let entityAvengerPower = "power"
     private let entityAvengerBio = "bio"
+    
+    
+    private let entityFightWinner = "winner"
+    private let entityFightLoser = "loser"
+    
     
     
     // MARK: - Managed Object Context

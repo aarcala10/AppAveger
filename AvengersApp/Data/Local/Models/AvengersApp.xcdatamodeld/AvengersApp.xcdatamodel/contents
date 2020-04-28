@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Avenger" representedClassName="Avenger" syncable="YES" codeGenerationType="class">
-        <attribute name="bio" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="bio" attributeType="String"/>
+        <attribute name="hero" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="power" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="team" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="power" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="team" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="figths" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fights" inverseName="avenger" inverseEntity="Fights"/>
+    </entity>
+    <entity name="Fights" representedClassName="Fights" syncable="YES" codeGenerationType="class">
+        <attribute name="losser" optional="YES" attributeType="String"/>
+        <attribute name="winner" optional="YES" attributeType="String"/>
+        <relationship name="avenger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avenger" inverseName="figths" inverseEntity="Avenger"/>
     </entity>
     <elements>
-        <element name="Avenger" positionX="-36" positionY="9" width="128" height="118"/>
+        <element name="Avenger" positionX="-207.9375" positionY="-112.67578125" width="128" height="133"/>
+        <element name="Fights" positionX="199.3671875" positionY="-53.36328125" width="128" height="88"/>
     </elements>
 </model>

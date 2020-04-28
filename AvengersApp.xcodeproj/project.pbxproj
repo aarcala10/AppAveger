@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		9114623F245778C900F9351D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114623E245778C900F9351D /* AppDelegate.swift */; };
 		91146241245778C900F9351D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146240245778C900F9351D /* SceneDelegate.swift */; };
-		91146243245778C900F9351D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146242245778C900F9351D /* FirstViewController.swift */; };
-		91146245245778C900F9351D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146244245778C900F9351D /* SecondViewController.swift */; };
+		91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146242245778C900F9351D /* SuperheroesViewController.swift */; };
+		91146245245778C900F9351D /* VillainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146244245778C900F9351D /* VillainsViewController.swift */; };
 		91146248245778C900F9351D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91146246245778C900F9351D /* Main.storyboard */; };
 		91146250245778CA00F9351D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9114624E245778CA00F9351D /* LaunchScreen.storyboard */; };
 		9114625E24577E9F00F9351D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9114625D24577E9F00F9351D /* Assets.xcassets */; };
@@ -20,14 +20,16 @@
 		911462672457826A00F9351D /* AvengersApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 911462652457826A00F9351D /* AvengersApp.xcdatamodeld */; };
 		9114626D2457854800F9351D /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114626C2457854800F9351D /* DataBase.swift */; };
 		9114626F245788D700F9351D /* AvengerTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114626E245788D700F9351D /* AvengerTeam.swift */; };
+		9114627524579D3500F9351D /* AvengerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114627424579D3500F9351D /* AvengerModel.swift */; };
+		911462772457A27A00F9351D /* FigthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911462762457A27A00F9351D /* FigthsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9114623B245778C900F9351D /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9114623E245778C900F9351D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91146240245778C900F9351D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91146242245778C900F9351D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		91146244245778C900F9351D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		91146242245778C900F9351D /* SuperheroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroesViewController.swift; sourceTree = "<group>"; };
+		91146244245778C900F9351D /* VillainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsViewController.swift; sourceTree = "<group>"; };
 		91146247245778C900F9351D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9114624F245778CA00F9351D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91146251245778CA00F9351D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		911462662457826A00F9351D /* AvengersApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AvengersApp.xcdatamodel; sourceTree = "<group>"; };
 		9114626C2457854800F9351D /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		9114626E245788D700F9351D /* AvengerTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerTeam.swift; sourceTree = "<group>"; };
+		9114627424579D3500F9351D /* AvengerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerModel.swift; sourceTree = "<group>"; };
+		911462762457A27A00F9351D /* FigthsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigthsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +77,7 @@
 				911462572457799800F9351D /* App */,
 				91146258245779B400F9351D /* Resources */,
 				9114625B24577A9600F9351D /* Data */,
-				91146242245778C900F9351D /* FirstViewController.swift */,
-				91146244245778C900F9351D /* SecondViewController.swift */,
-				91146246245778C900F9351D /* Main.storyboard */,
-				9114624E245778CA00F9351D /* LaunchScreen.storyboard */,
+				9114627024578AF600F9351D /* UI */,
 			);
 			path = AvengersApp;
 			sourceTree = "<group>";
@@ -105,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				9114626324577FA700F9351D /* DataProvider.swift */,
-				9114625C24577AAF00F9351D /* Local */,
 				9114626E245788D700F9351D /* AvengerTeam.swift */,
+				9114625C24577AAF00F9351D /* Local */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -123,9 +124,46 @@
 		911462682457850A00F9351D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9114627424579D3500F9351D /* AvengerModel.swift */,
 				911462652457826A00F9351D /* AvengersApp.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9114627024578AF600F9351D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				911462732457962200F9351D /* Cells */,
+				91146272245795D700F9351D /* Views */,
+				911462712457958F00F9351D /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		911462712457958F00F9351D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				91146242245778C900F9351D /* SuperheroesViewController.swift */,
+				91146244245778C900F9351D /* VillainsViewController.swift */,
+				911462762457A27A00F9351D /* FigthsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		91146272245795D700F9351D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91146246245778C900F9351D /* Main.storyboard */,
+				9114624E245778CA00F9351D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		911462732457962200F9351D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +240,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9114626424577FA700F9351D /* DataProvider.swift in Sources */,
-				91146245245778C900F9351D /* SecondViewController.swift in Sources */,
-				91146243245778C900F9351D /* FirstViewController.swift in Sources */,
+				911462772457A27A00F9351D /* FigthsViewController.swift in Sources */,
+				9114627524579D3500F9351D /* AvengerModel.swift in Sources */,
+				91146245245778C900F9351D /* VillainsViewController.swift in Sources */,
+				91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */,
 				9114626F245788D700F9351D /* AvengerTeam.swift in Sources */,
 				9114623F245778C900F9351D /* AppDelegate.swift in Sources */,
 				9114626D2457854800F9351D /* DataBase.swift in Sources */,
