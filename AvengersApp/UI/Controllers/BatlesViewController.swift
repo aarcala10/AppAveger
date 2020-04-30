@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FigthsViewController: UIViewController {
+class BatlesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

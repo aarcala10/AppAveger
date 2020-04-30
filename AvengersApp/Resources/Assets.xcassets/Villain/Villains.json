@@ -1,0 +1,66 @@
+[
+        {
+            "hero": "Malekyth",
+            "description": "The Dark Elf of Svartalfheim, Malekith uses his magic and trickery to bring war to all of the Ten Realms.",
+            "power": 10,
+            "img": "img_villain_malekith"
+        },
+        {
+            "hero": "Red Skull",
+            "name": "Johann Shmidt",
+            "description": "Rising to power during World War II, Johann Schmidt become one of Earth’s most dangerous threats and one of Captain America’s greatest enemies.",
+            "power": 10,
+            "img": "img_villain_johann_schmidt"
+        },
+        {
+            "hero": "Ronan",
+            "name": "Ronan The Acuser",
+            "description": "As a cruel and fanatical member of the Kree race, Ronan double-crossed Thanos in an attempt to keep the Power Stone for himself.",
+            "power": 8,
+            "img": "img_villain_ronan"
+        },
+        {
+            "hero": "Ultron",
+            "description": "Conceived by Tony Stark to be the Avengers' replacement for the world, Ultron turns into one of their greatest villains.",
+            "power": 8,
+            "img": "img_villain_ultron"
+        },
+        {
+            "hero": "Thanos",
+            "description": "Using the power of the Infinity Stones, Thanos believes he can ultimately save the universe by wiping out half of its population.",
+            "power": 10,
+            "img": "img_villain_thanos"
+        },
+        {
+            "hero": "Ego",
+            "description": "Ego, a powerful Celestial being and intergalactic explorer, traveled the cosmos in search of reuniting with his long-lost biological son, Peter Quill, and embarking on his most important mission together as father and son.",
+            "power": 8,
+            "img": "img_villain_ego"
+        },
+        {
+            "hero": "Yon-Rogg",
+            "description": "As the leader of a squad of elite Kree soldiers, Yon-Rogg takes newly-recruited Carol Danvers under his wing and trains her.",
+            "power": 6,
+            "img": "img_heroe_yon_rogg"
+        },
+        {
+            "hero": "Dormammu",
+            "description": "Originating in the aptly-named Dark Dimension, this incredibly powerful being has ominous plans for Earth and those who live there.",
+            "power": 8,
+            "img": "img_villain_dormammu"
+        },
+        {
+            "hero": "Hela",
+            "description": "Hela, Odin’s first born and sister to the Asgardian princes, seeks her place as the rightful heir of Asgard following the death of Odin and her release from imprisonment.",
+            "power": 6,
+            "img": "img_villain_hela"
+        },
+        {
+            "hero": "Dinamo/Whipash",
+            "name": "Ivan Anko",
+            "description": "Ivan Vanko's father has worked with Tony Stark's father in the past on the source of Iron Man's power, but after learning of his dirty secrets he was deported and his son Ivan has hated the Stark family ever since.",
+            "power": 8,
+            "img": "img_villain_ivan_vanko"
+        }
+]
+

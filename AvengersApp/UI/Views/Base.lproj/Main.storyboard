@@ -15,32 +15,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="131.5" y="426.5" width="151" height="43"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-it-DV7">
+                                <rect key="frame" x="0.0" y="145" width="414" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="110" y="477.5" width="194.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AvengerViewCell" rowHeight="135" id="VgN-CI-88W" customClass="AvengerViewCell" customModule="AvengersApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VgN-CI-88W" id="Xkd-IN-Xby">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFc-gd-Njn">
+                                                    <rect key="frame" x="8" y="8" width="398" height="119"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVN-S8-8ES">
+                                                            <rect key="frame" x="8" y="6" width="220" height="107"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="4Nf-6b-9uq"/>
+                                                                <constraint firstAttribute="width" constant="220" id="9wX-gO-Ttl"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Td-c1-CdS">
+                                                            <rect key="frame" x="236" y="16" width="154" height="53"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="PVN-S8-8ES" firstAttribute="top" secondItem="uFc-gd-Njn" secondAttribute="top" constant="6" id="4oo-cs-R3N"/>
+                                                        <constraint firstItem="PVN-S8-8ES" firstAttribute="leading" secondItem="uFc-gd-Njn" secondAttribute="leadingMargin" id="Zww-Y2-wOU"/>
+                                                        <constraint firstItem="9Td-c1-CdS" firstAttribute="trailing" secondItem="uFc-gd-Njn" secondAttribute="trailingMargin" id="c5Y-GG-vHT"/>
+                                                        <constraint firstItem="9Td-c1-CdS" firstAttribute="top" secondItem="uFc-gd-Njn" secondAttribute="top" constant="16" id="d7c-Un-9v3"/>
+                                                        <constraint firstAttribute="bottom" secondItem="9Td-c1-CdS" secondAttribute="bottom" constant="50" id="eKv-mt-O7e"/>
+                                                        <constraint firstItem="9Td-c1-CdS" firstAttribute="leading" secondItem="PVN-S8-8ES" secondAttribute="trailing" constant="8" id="oi0-oN-srj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PVN-S8-8ES" secondAttribute="bottom" constant="6" id="uKM-bU-dQu"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="uFc-gd-Njn" secondAttribute="bottom" constant="8" id="G7a-LS-Tzj"/>
+                                                <constraint firstItem="uFc-gd-Njn" firstAttribute="leading" secondItem="Xkd-IN-Xby" secondAttribute="leading" constant="8" id="GOf-Tx-sRI"/>
+                                                <constraint firstItem="uFc-gd-Njn" firstAttribute="top" secondItem="Xkd-IN-Xby" secondAttribute="top" constant="8" id="JjV-jf-B7w"/>
+                                                <constraint firstAttribute="trailing" secondItem="uFc-gd-Njn" secondAttribute="trailing" constant="8" id="kWi-vd-bed"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.3957032109697125" green="0.57890772167007798" blue="0.85590204641903722" alpha="0.6089469177890412" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="cellView" destination="uFc-gd-Njn" id="pd0-wf-DMC"/>
+                                            <outlet property="heroText" destination="9Td-c1-CdS" id="Pa4-jS-ILx"/>
+                                            <outlet property="imgView" destination="PVN-S8-8ES" id="8Q2-XB-YAH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SuperHeroes" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="SuperHeroes" image="ic_tab_heroes" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="tableView" destination="jYv-it-DV7" id="HlF-bx-NhU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="733" y="-532"/>
+            <point key="canvasLocation" x="730.43478260869574" y="-532.36607142857144"/>
         </scene>
         <!--Villains-->
         <scene sceneID="wg7-f3-ORb">
@@ -71,7 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Villains" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Villains" image="ic_tab_villain" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,17 +139,17 @@
             </objects>
             <point key="canvasLocation" x="-339" y="21"/>
         </scene>
-        <!--Fights-->
+        <!--Batles-->
         <scene sceneID="XQj-Fg-POI">
             <objects>
-                <viewController id="q6R-Fo-vtL" customClass="FigthsViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q6R-Fo-vtL" customClass="BatlesViewController" customModule="AvengersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ppN-4S-xji">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="03q-Hv-IzL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fights" id="aQD-w7-j7x"/>
+                    <tabBarItem key="tabBarItem" title="Batles" image="ic_tab_battles" id="aQD-w7-j7x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BE7-6t-HPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBar contentMode="scaleToFill" id="y6Y-ox-epO">
@@ -120,7 +163,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="ic_tab_battles" width="17" height="17"/>
+        <image name="ic_tab_heroes" width="16" height="17"/>
+        <image name="ic_tab_villain" width="11" height="17"/>
     </resources>
 </document>

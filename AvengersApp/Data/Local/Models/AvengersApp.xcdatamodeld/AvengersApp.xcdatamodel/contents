@@ -3,6 +3,7 @@
     <entity name="Avenger" representedClassName="Avenger" syncable="YES" codeGenerationType="class">
         <attribute name="bio" attributeType="String"/>
         <attribute name="hero" attributeType="String"/>
+        <attribute name="img" attributeType="String" defaultValueString="&quot;img_heroe_black_widow&quot;"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="team" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -14,7 +15,7 @@
         <relationship name="avenger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avenger" inverseName="figths" inverseEntity="Avenger"/>
     </entity>
     <elements>
-        <element name="Avenger" positionX="-207.9375" positionY="-112.67578125" width="128" height="133"/>
+        <element name="Avenger" positionX="-207.9375" positionY="-112.67578125" width="128" height="148"/>
         <element name="Fights" positionX="199.3671875" positionY="-53.36328125" width="128" height="88"/>
     </elements>
 </model>

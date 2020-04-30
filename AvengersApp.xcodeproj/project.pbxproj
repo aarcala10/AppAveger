@@ -13,15 +13,16 @@
 		91146245245778C900F9351D /* VillainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146244245778C900F9351D /* VillainsViewController.swift */; };
 		91146248245778C900F9351D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91146246245778C900F9351D /* Main.storyboard */; };
 		91146250245778CA00F9351D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9114624E245778CA00F9351D /* LaunchScreen.storyboard */; };
-		9114625E24577E9F00F9351D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9114625D24577E9F00F9351D /* Assets.xcassets */; };
-		9114626024577EBE00F9351D /* Superheroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 9114625F24577EBE00F9351D /* Superheroes.json */; };
-		9114626224577ECC00F9351D /* Villains.json in Resources */ = {isa = PBXBuildFile; fileRef = 9114626124577ECB00F9351D /* Villains.json */; };
 		9114626424577FA700F9351D /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114626324577FA700F9351D /* DataProvider.swift */; };
 		911462672457826A00F9351D /* AvengersApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 911462652457826A00F9351D /* AvengersApp.xcdatamodeld */; };
 		9114626D2457854800F9351D /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114626C2457854800F9351D /* DataBase.swift */; };
 		9114626F245788D700F9351D /* AvengerTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114626E245788D700F9351D /* AvengerTeam.swift */; };
 		9114627524579D3500F9351D /* AvengerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114627424579D3500F9351D /* AvengerModel.swift */; };
-		911462772457A27A00F9351D /* FigthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911462762457A27A00F9351D /* FigthsViewController.swift */; };
+		911462772457A27A00F9351D /* BatlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911462762457A27A00F9351D /* BatlesViewController.swift */; };
+		917A162424597B6F00BB7030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917A162324597B6F00BB7030 /* Assets.xcassets */; };
+		917A162624597CD900BB7030 /* Superheroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 917A162524597CD900BB7030 /* Superheroes.json */; };
+		917A162824597CE500BB7030 /* Villains.json in Resources */ = {isa = PBXBuildFile; fileRef = 917A162724597CE500BB7030 /* Villains.json */; };
+		917A162C245980C900BB7030 /* AvengerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917A162B245980C900BB7030 /* AvengerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,15 +34,16 @@
 		91146247245778C900F9351D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9114624F245778CA00F9351D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91146251245778CA00F9351D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9114625D24577E9F00F9351D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../BootCamp/RECURSOS/persistencia-instrumentacion-optimizacion2/project/Assets.xcassets"; sourceTree = "<group>"; };
-		9114625F24577EBE00F9351D /* Superheroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Superheroes.json; path = "../../../BootCamp/RECURSOS/persistencia-instrumentacion-optimizacion2/project/Assets.xcassets/Superheroes/Superheroes.json"; sourceTree = "<group>"; };
-		9114626124577ECB00F9351D /* Villains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Villains.json; path = "../../../BootCamp/RECURSOS/persistencia-instrumentacion-optimizacion2/project/Assets.xcassets/Villain/Villains.json"; sourceTree = "<group>"; };
 		9114626324577FA700F9351D /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		911462662457826A00F9351D /* AvengersApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AvengersApp.xcdatamodel; sourceTree = "<group>"; };
 		9114626C2457854800F9351D /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		9114626E245788D700F9351D /* AvengerTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerTeam.swift; sourceTree = "<group>"; };
 		9114627424579D3500F9351D /* AvengerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerModel.swift; sourceTree = "<group>"; };
-		911462762457A27A00F9351D /* FigthsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigthsViewController.swift; sourceTree = "<group>"; };
+		911462762457A27A00F9351D /* BatlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatlesViewController.swift; sourceTree = "<group>"; };
+		917A162324597B6F00BB7030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		917A162524597CD900BB7030 /* Superheroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Superheroes.json; path = Assets.xcassets/Superheroes/Superheroes.json; sourceTree = "<group>"; };
+		917A162724597CE500BB7030 /* Villains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Villains.json; path = Assets.xcassets/Villain/Villains.json; sourceTree = "<group>"; };
+		917A162B245980C900BB7030 /* AvengerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvengerViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,9 @@
 		91146258245779B400F9351D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9114625D24577E9F00F9351D /* Assets.xcassets */,
-				9114625F24577EBE00F9351D /* Superheroes.json */,
-				9114626124577ECB00F9351D /* Villains.json */,
+				917A162324597B6F00BB7030 /* Assets.xcassets */,
+				917A162524597CD900BB7030 /* Superheroes.json */,
+				917A162724597CE500BB7030 /* Villains.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -145,7 +147,7 @@
 			children = (
 				91146242245778C900F9351D /* SuperheroesViewController.swift */,
 				91146244245778C900F9351D /* VillainsViewController.swift */,
-				911462762457A27A00F9351D /* FigthsViewController.swift */,
+				911462762457A27A00F9351D /* BatlesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 		911462732457962200F9351D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				917A162B245980C900BB7030 /* AvengerViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -224,11 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9114626224577ECC00F9351D /* Villains.json in Resources */,
+				917A162824597CE500BB7030 /* Villains.json in Resources */,
 				91146250245778CA00F9351D /* LaunchScreen.storyboard in Resources */,
-				9114626024577EBE00F9351D /* Superheroes.json in Resources */,
-				9114625E24577E9F00F9351D /* Assets.xcassets in Resources */,
+				917A162624597CD900BB7030 /* Superheroes.json in Resources */,
 				91146248245778C900F9351D /* Main.storyboard in Resources */,
+				917A162424597B6F00BB7030 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +242,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917A162C245980C900BB7030 /* AvengerViewCell.swift in Sources */,
 				9114626424577FA700F9351D /* DataProvider.swift in Sources */,
-				911462772457A27A00F9351D /* FigthsViewController.swift in Sources */,
+				911462772457A27A00F9351D /* BatlesViewController.swift in Sources */,
 				9114627524579D3500F9351D /* AvengerModel.swift in Sources */,
 				91146245245778C900F9351D /* VillainsViewController.swift in Sources */,
 				91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */,
