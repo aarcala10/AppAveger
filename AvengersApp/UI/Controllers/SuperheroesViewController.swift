@@ -13,9 +13,6 @@ class SuperheroesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -78,7 +75,7 @@ class SuperheroesViewController: UIViewController {
     private func saveSuperhero(_ name: String?,_ hero: String,_ bio: String,_ power: Int,_ team: Int,_ img: String) -> Avenger? {
     
         
-        guard let superhero = dataProvider.createSuperhero() else  {
+        guard let superhero = dataProvider.createAvenger() else  {
             return nil
         }
         superhero.hero = hero
@@ -91,7 +88,7 @@ class SuperheroesViewController: UIViewController {
         
         
         // Call dataProvider to persist new Avenger
-        dataProvider.saveSuperhero(superhero)
+        dataProvider.saveVillain(superhero)
         return superhero
     }
     
@@ -112,7 +109,6 @@ extension SuperheroesViewController: UITableViewDelegate, UITableViewDataSource 
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

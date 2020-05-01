@@ -16,6 +16,7 @@ class AvengerViewCell: UITableViewCell {
     @IBOutlet weak var cellView : UIView!
     @IBOutlet weak var heroText: UILabel!
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var powerStars: UIImageView!
     
     
     // MARK: - Private properties
@@ -32,7 +33,7 @@ class AvengerViewCell: UITableViewCell {
         avenger = nil
         update(hero: nil)
         update(img: nil)
-
+        update(power: 0)
     }
     // MARK: Configure view methods
     func configure(with avenger: Avenger) {
@@ -40,24 +41,25 @@ class AvengerViewCell: UITableViewCell {
         
         update(hero: avenger.hero)
         update(img: avenger.img)
+        update(power: avenger.power)
     }
     
     private func configureCellView() {
         // Add cell view corner radius
-        cellView.layer.cornerRadius = 4.0
+        cellView.layer.cornerRadius = 12.0
         configureViewShadow()
     }
     
     // Add a ligth shadow effect to the background cell view
     private func configureViewShadow() {
-        cellView.layer.shadowColor = UIColor.gray.cgColor
+        cellView.layer.shadowColor = UIColor.black.cgColor
         cellView.layer.shadowOffset = CGSize.zero
         cellView.layer.shadowRadius = 4.0
-        cellView.layer.shadowOpacity = 0.2
-        imgView.layer.shadowColor = UIColor.gray.cgColor
+        cellView.layer.shadowOpacity = 0.8
+        imgView.layer.shadowColor = UIColor.black.cgColor
         imgView.layer.shadowOffset = CGSize.zero
         imgView.layer.shadowRadius = 4.0
-        imgView.layer.shadowOpacity = 0.2
+        imgView.layer.shadowOpacity = 0.8
         
     }
     
@@ -70,5 +72,12 @@ class AvengerViewCell: UITableViewCell {
         guard let imagen = img else {return}
         imgView.image = UIImage.init(named: imagen)
     }
+    private func update (power: Int16?) {
+        guard let powerValue = power else {return}
+        let powerStar = (powerValue/2)
+        let imagePower = "ic_stars_\(powerStar)"
+        powerStars.image = UIImage.init(named: imagePower)
+    }
+
 
 }

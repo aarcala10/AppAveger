@@ -20,14 +20,14 @@ class DataProvider {
     }
     
     //MARK: Create:
-    func createSuperhero() -> Avenger? {
+    func createAvenger() -> Avenger? {
         return database?.createData() as? Avenger
     }
 
     
     
     //MARK: Save:
-    func saveSuperhero(_ avenger: Avenger) {
+    func saveVillain(_ avenger: Avenger) {
         database?.persist(avenger)
     }
     
