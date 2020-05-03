@@ -14,6 +14,7 @@ class VillainsViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            title = "VILLAINS"
             configureTableView()
             updateAllData()
             
@@ -23,6 +24,7 @@ class VillainsViewController: UIViewController {
         
         private var villains : [AvengerModel] = []
         private var villainsList : [Avenger] = []
+        private var avenger: Avenger?
         
         
         
@@ -58,7 +60,6 @@ class VillainsViewController: UIViewController {
                             saveVillains(name, hero, bio, power, team, img )
                         }
                         
-                        
                     } catch {
                         fatalError("Could not read the JSON")
                     }
@@ -87,7 +88,7 @@ class VillainsViewController: UIViewController {
             
             
             // Call dataProvider to persist new Avenger
-            dataProvider.saveVillain(villain)
+            dataProvider.saveAvenger(villain)
             return villain
         }
         
@@ -128,20 +129,31 @@ class VillainsViewController: UIViewController {
             return cell
         }
         
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            //let detailVC = DetailAvengerViewController()
+            avenger = villainsList[indexPath.row]
+            performSegue(withIdentifier: "villainToDetail", sender: Any?.self)
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
         
         
+}
+// MARK: - Navigation
+extension VillainsViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as? DetailAvengerViewController)?.delegate = self
+        (segue.destination as? DetailAvengerViewController)?.avenger = avenger
     }
+}
 
-    // MARK: - Navigation
-    //extension SuperheroesViewController {
-    //    // Capture segue navigation for set Self as AddTaskViewController delegate
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        // Get segue destination ViewController, in this case should be
-    //        // a AddTaskViewController type.
-    //        // Set AddTaskViewController delegate
-    //        (segue.destination as? DetailSuperheroViewController)?.delegate = self
-    //    }
-    //}
+//MARK: Delegate
+extension VillainsViewController: DetailAvengerDelegate{
+    
+}
+
+
+  
 
 
 

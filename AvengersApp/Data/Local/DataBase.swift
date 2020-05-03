@@ -20,8 +20,10 @@ class Database {
     private let entityAvengerBio = "bio"
     
     
-    private let entityFightWinner = "winner"
-    private let entityFightLoser = "loser"
+    private let entityBatle = "Batle"
+    private let entityBatleId = "id"
+    private let entityBatleWinner = "winner"
+    private let entityBatleLoser = "loser"
     
     
     
@@ -36,6 +38,8 @@ class Database {
     
     
     // MARK: - Database methods
+    
+    //Create
     func createData() -> NSManagedObject? {
         guard let contextMOB = context(),
               let entity = NSEntityDescription.entity(forEntityName: entityAvenger,
@@ -46,8 +50,27 @@ class Database {
         return Avenger(entity: entity,
                     insertInto: context())
     }
+    func createDataBatle() -> NSManagedObject? {
+        guard let contextMOB = context(),
+              let entity = NSEntityDescription.entity(forEntityName: entityBatle,
+                                                      in: contextMOB) else {
+            return nil
+        }
+        
+        return Batle(entity: entity,
+                    insertInto: context())
+    }
     
-    func persist(_ task: Avenger) {
+    
+    //Save
+    func persist(_ avenger: Avenger) {
+        guard let contextMOB = context() else {
+            return
+        }
+        
+        try? contextMOB.save()
+    }
+    func persistBatle(_ batle: Batle) {
         guard let contextMOB = context() else {
             return
         }
@@ -55,9 +78,18 @@ class Database {
         try? contextMOB.save()
     }
     
+    
+    //Load All
+    
     func fecthAllData() -> [NSManagedObject]? {
         return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityAvenger)) as? [NSManagedObject]
     }
+    
+    func fecthAllDataBatle() -> [NSManagedObject]? {
+        return try? context()?.fetch(NSFetchRequest<NSFetchRequestResult>(entityName: entityBatle)) as? [NSManagedObject]
+    }
+    
+    //Load BY
     
     func fetchDataBy(team: Int) -> [NSManagedObject]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityAvenger)
@@ -66,10 +98,25 @@ class Database {
         return try? context()?.fetch(fetchRequest) as? [NSManagedObject]
     }
     
+    func fetchDataBatleBy(id: Int16) -> [NSManagedObject]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityBatle)
+        fetchRequest.predicate = NSPredicate(format: "id = \(id)")
+        
+        return try? context()?.fetch(fetchRequest) as? [NSManagedObject]
+    }
     
+    //Delete
     func delete(data: [NSManagedObject]) {
         let contextMOB = context()
         data.forEach{ contextMOB?.delete($0) }
+        
+        print("Deleted objects: \(String(describing: contextMOB?.deletedObjects))")
+        try? contextMOB?.save()
+    }
+    
+    func deleteBatle(batle: [Batle]) {
+        let contextMOB = context()
+        batle.forEach{ contextMOB?.delete($0) }
         
         print("Deleted objects: \(String(describing: contextMOB?.deletedObjects))")
         try? contextMOB?.save()

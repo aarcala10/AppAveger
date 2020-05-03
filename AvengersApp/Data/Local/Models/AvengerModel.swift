@@ -15,5 +15,7 @@ struct AvengerModel: Codable {
     let power: Int
     let description: String
     let img: String
+    
+    
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Avenger" representedClassName="Avenger" syncable="YES" codeGenerationType="class">
         <attribute name="bio" attributeType="String"/>
         <attribute name="hero" attributeType="String"/>
@@ -7,15 +7,17 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="team" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="figths" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fights" inverseName="avenger" inverseEntity="Fights"/>
+        <relationship name="loser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batle" inverseName="villain" inverseEntity="Batle"/>
+        <relationship name="winner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batle" inverseName="superhero" inverseEntity="Batle"/>
     </entity>
-    <entity name="Fights" representedClassName="Fights" syncable="YES" codeGenerationType="class">
-        <attribute name="losser" optional="YES" attributeType="String"/>
+    <entity name="Batle" representedClassName="Batle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="winner" optional="YES" attributeType="String"/>
-        <relationship name="avenger" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avenger" inverseName="figths" inverseEntity="Avenger"/>
+        <relationship name="superhero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger" inverseName="winner" inverseEntity="Avenger"/>
+        <relationship name="villain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger" inverseName="loser" inverseEntity="Avenger"/>
     </entity>
     <elements>
-        <element name="Avenger" positionX="-207.9375" positionY="-112.67578125" width="128" height="148"/>
-        <element name="Fights" positionX="199.3671875" positionY="-53.36328125" width="128" height="88"/>
+        <element name="Avenger" positionX="-482.8359375" positionY="-47.09765625" width="128" height="163"/>
+        <element name="Batle" positionX="199.3671875" positionY="-53.36328125" width="128" height="103"/>
     </elements>
 </model>

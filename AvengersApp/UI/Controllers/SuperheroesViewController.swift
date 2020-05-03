@@ -13,10 +13,13 @@ class SuperheroesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "SUPERHEROES"
         configureTableView()
         updateAllData()
+        
         
     }
     // MARK: - Private methods
@@ -24,7 +27,7 @@ class SuperheroesViewController: UIViewController {
     
     private var superheroes : [AvengerModel] = []
     private var superheroesList : [Avenger] = []
-    
+    private var avenger: Avenger?
     
     
     // MARK: - Private methods
@@ -60,16 +63,17 @@ class SuperheroesViewController: UIViewController {
                     }
                     
                     
+                    
                 } catch {
                     fatalError("Could not read the JSON")
                 }
             } else {
                 fatalError("Could not build the path url")
             }
+            
         
         //print("\(superheroes)")
     }
-    
     
     
     private func saveSuperhero(_ name: String?,_ hero: String,_ bio: String,_ power: Int,_ team: Int,_ img: String) -> Avenger? {
@@ -88,7 +92,7 @@ class SuperheroesViewController: UIViewController {
         
         
         // Call dataProvider to persist new Avenger
-        dataProvider.saveVillain(superhero)
+        dataProvider.saveAvenger(superhero)
         return superhero
     }
     
@@ -124,22 +128,29 @@ extension SuperheroesViewController: UITableViewDelegate, UITableViewDataSource 
             // Configure current cell view with Task data
             cell.configure(with: superheroesList[indexPath.row])
         }
-        
+        avenger = superheroesList[indexPath.row]
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let detailVC = DetailAvengerViewController()
+        avenger = superheroesList[indexPath.row]
+        performSegue(withIdentifier: "superheroToDetail", sender: Any?.self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     
 }
 
 // MARK: - Navigation
-//extension SuperheroesViewController {
-//    // Capture segue navigation for set Self as AddTaskViewController delegate
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get segue destination ViewController, in this case should be
-//        // a AddTaskViewController type.
-//        // Set AddTaskViewController delegate
-//        (segue.destination as? DetailSuperheroViewController)?.delegate = self
-//    }
-//}
+extension SuperheroesViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as? DetailAvengerViewController)?.delegate = self
+        (segue.destination as? DetailAvengerViewController)?.avenger = avenger
+    }
+}
 
+//MARK: Delegate
+extension SuperheroesViewController: DetailAvengerDelegate{
+    
+}

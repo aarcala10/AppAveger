@@ -52,14 +52,20 @@ class AvengerViewCell: UITableViewCell {
     
     // Add a ligth shadow effect to the background cell view
     private func configureViewShadow() {
+        
         cellView.layer.shadowColor = UIColor.black.cgColor
         cellView.layer.shadowOffset = CGSize.zero
         cellView.layer.shadowRadius = 4.0
         cellView.layer.shadowOpacity = 0.8
+        cellView.layer.borderWidth = 4
+        cellView.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+        
         imgView.layer.shadowColor = UIColor.black.cgColor
         imgView.layer.shadowOffset = CGSize.zero
         imgView.layer.shadowRadius = 4.0
         imgView.layer.shadowOpacity = 0.8
+        imgView.layer.borderWidth = 4
+        imgView.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
         
     }
     

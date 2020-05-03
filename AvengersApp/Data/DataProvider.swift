@@ -21,33 +21,46 @@ class DataProvider {
     
     //MARK: Create:
     func createAvenger() -> Avenger? {
+        
         return database?.createData() as? Avenger
+    }
+    func createBatle() -> Batle? {
+        return database?.createDataBatle() as? Batle
     }
 
     
-    
     //MARK: Save:
-    func saveVillain(_ avenger: Avenger) {
+    func saveAvenger(_ avenger: Avenger) {
         database?.persist(avenger)
     }
-    
+    func saveBatle(_ batle: Batle) {
+        database?.persistBatle(batle)
+    }
     
     //MARK: Load all:
-    func loadAllSuperheroes() -> [Avenger] {
+    func loadAllAvengers() -> [Avenger] {
         guard let data = database?.fecthAllData() as? [Avenger] else {
             return []
         }
         
         return data
     }
-
+    func loadAllBatles() -> [Batle] {
+        guard let data = database?.fecthAllDataBatle() as? [Batle] else {
+            return []
+        }
+        
+        return data
+    }
     
     
     //MARK: Load by:
     func loadAvengerBy(team: AvengerTeam) -> [Avenger] {
         return database?.fetchDataBy(team: team.rawValue) as? [Avenger] ?? []
     }
-    
+    func loadBtaleBy(id: Int16) -> [Batle] {
+        return database?.fetchDataBatleBy(id: id) as? [Batle] ?? []
+    }
     
     //MARK: Delete:
     func deleteAvenger(_ avenger: Avenger) {
