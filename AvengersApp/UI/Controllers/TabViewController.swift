@@ -15,11 +15,11 @@ class TabViewController: UITabBarController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.selectedIndex = UserDefaults.standard.integer(forKey: "tabSelected")
+        selectedIndex = UserDefaults.standard.integer(forKey: "tabSelected")
 
     }
     override func viewDidDisappear(_ animated: Bool) {
-        UserDefaults.standard.set(self.selectedIndex, forKey: "tabSelected")
+        UserDefaults.standard.set(selectedIndex, forKey: "tabSelected")
     }
         
 }
