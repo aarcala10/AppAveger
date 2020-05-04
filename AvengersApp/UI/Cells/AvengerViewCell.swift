@@ -25,6 +25,7 @@ class AvengerViewCell: UITableViewCell {
     // MARK: - Lifecycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         configureCellView()
     
     }

@@ -16,7 +16,8 @@ class SuperheroesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "SUPERHEROES"
+        
+        navigationController?.navigationBar.topItem?.title = "Superhero"
         configureTableView()
         updateAllData()
         
@@ -103,6 +104,13 @@ class SuperheroesViewController: UIViewController {
         loadSuperheroes()
         showData()
     }
+    private func updateAvenger(_ avenger: Avenger?) -> Avenger? {
+        guard let superhero = avenger else {return nil}
+        dataProvider.saveAvenger(superhero)
+        return superhero
+    
+    }
+    
 
 }
 
@@ -134,7 +142,7 @@ extension SuperheroesViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let detailVC = DetailAvengerViewController()
         avenger = superheroesList[indexPath.row]
-        performSegue(withIdentifier: "superheroToDetail", sender: Any?.self)
+        performSegue(withIdentifier: "superheroToDetail", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -152,5 +160,8 @@ extension SuperheroesViewController {
 
 //MARK: Delegate
 extension SuperheroesViewController: DetailAvengerDelegate{
-    
+    func avengerPowerEdited(_ avenger: Avenger?) {
+        updateAvenger(avenger)
+        tableView.reloadData()
+    }
 }

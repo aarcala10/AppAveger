@@ -7,17 +7,17 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="power" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="team" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="loser" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batle" inverseName="villain" inverseEntity="Batle"/>
-        <relationship name="winner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Batle" inverseName="superhero" inverseEntity="Batle"/>
     </entity>
     <entity name="Batle" representedClassName="Batle" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="winner" optional="YES" attributeType="String"/>
-        <relationship name="superhero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger" inverseName="winner" inverseEntity="Avenger"/>
-        <relationship name="villain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger" inverseName="loser" inverseEntity="Avenger"/>
+        <attribute name="superheroname" optional="YES" attributeType="String"/>
+        <attribute name="villainname" optional="YES" attributeType="String"/>
+        <attribute name="winner" attributeType="String"/>
+        <relationship name="superhero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger"/>
+        <relationship name="villain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Avenger"/>
     </entity>
     <elements>
-        <element name="Avenger" positionX="-482.8359375" positionY="-47.09765625" width="128" height="163"/>
-        <element name="Batle" positionX="199.3671875" positionY="-53.36328125" width="128" height="103"/>
+        <element name="Avenger" positionX="-482.8359375" positionY="-47.09765625" width="128" height="133"/>
+        <element name="Batle" positionX="199.3671875" positionY="-53.36328125" width="128" height="133"/>
     </elements>
 </model>

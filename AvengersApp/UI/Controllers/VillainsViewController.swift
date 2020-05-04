@@ -14,7 +14,9 @@ class VillainsViewController: UIViewController {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = "VILLAINS"
+            
+            navigationController?.navigationBar.topItem?.title = "Villain"
+         
             configureTableView()
             updateAllData()
             
@@ -99,8 +101,13 @@ class VillainsViewController: UIViewController {
             loadVillains()
             showData()
         }
-
-    }
+        private func updateAvenger(_ avenger: Avenger?) -> Avenger? {
+            guard let villain = avenger else {return nil}
+            dataProvider.saveAvenger(villain)
+            return villain
+    
+        }
+}
 
     // MARK: - TableView
     extension VillainsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -113,7 +120,6 @@ class VillainsViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // Get task count for current task state selected
             return villainsList.count
         }
         
@@ -122,7 +128,6 @@ class VillainsViewController: UIViewController {
                                                      for: indexPath) as! AvengerViewCell
             
             if indexPath.row < villainsList.count {
-                // Configure current cell view with Task data
                 cell.configure(with: villainsList[indexPath.row])
             }
             
@@ -149,7 +154,10 @@ extension VillainsViewController {
 
 //MARK: Delegate
 extension VillainsViewController: DetailAvengerDelegate{
-    
+    func avengerPowerEdited(_ avenger:Avenger?) {
+        updateAvenger(avenger)
+        tableView.reloadData()
+    }
 }
 
 

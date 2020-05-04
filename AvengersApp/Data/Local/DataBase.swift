@@ -98,9 +98,16 @@ class Database {
         return try? context()?.fetch(fetchRequest) as? [NSManagedObject]
     }
     
-    func fetchDataBatleBy(id: Int16) -> [NSManagedObject]? {
+    func fetchDataBatleBy(superhero: Avenger) -> [NSManagedObject]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityBatle)
-        fetchRequest.predicate = NSPredicate(format: "id = \(id)")
+        fetchRequest.predicate = NSPredicate(format: "superhero = %@",superhero)
+        
+        return try? context()?.fetch(fetchRequest) as? [NSManagedObject]
+    }
+    
+    func fetchDataBatleBy(villain: Avenger) -> [NSManagedObject]? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityBatle)
+        fetchRequest.predicate = NSPredicate(format: "villain = %@",villain)
         
         return try? context()?.fetch(fetchRequest) as? [NSManagedObject]
     }

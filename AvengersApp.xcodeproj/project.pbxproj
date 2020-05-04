@@ -25,6 +25,11 @@
 		9152DFC8245CFD7900F94294 /* DetailAvenger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9152DFC7245CFD7900F94294 /* DetailAvenger.storyboard */; };
 		9152DFCA245D0D7000F94294 /* DetailAvengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9152DFC9245D0D7000F94294 /* DetailAvengerViewController.swift */; };
 		9152DFCC245D0E1100F94294 /* DetailBatle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9152DFCB245D0E1100F94294 /* DetailBatle.storyboard */; };
+		91698266245F00DB0075D646 /* EditPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91698265245F00DB0075D646 /* EditPowerViewController.swift */; };
+		91698268245F3B120075D646 /* AddBatleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91698267245F3B120075D646 /* AddBatleViewController.swift */; };
+		9169826A245F42410075D646 /* AddBatle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91698269245F42410075D646 /* AddBatle.storyboard */; };
+		9169826C245F47460075D646 /* SelectAvengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169826B245F47460075D646 /* SelectAvengerViewController.swift */; };
+		9169826E245FA9710075D646 /* BatleViiewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9169826D245FA9710075D646 /* BatleViiewCollection.swift */; };
 		917A162424597B6F00BB7030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 917A162324597B6F00BB7030 /* Assets.xcassets */; };
 		917A162624597CD900BB7030 /* Superheroes.json in Resources */ = {isa = PBXBuildFile; fileRef = 917A162524597CD900BB7030 /* Superheroes.json */; };
 		917A162824597CE500BB7030 /* Villains.json in Resources */ = {isa = PBXBuildFile; fileRef = 917A162724597CE500BB7030 /* Villains.json */; };
@@ -52,6 +57,11 @@
 		9152DFC7245CFD7900F94294 /* DetailAvenger.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailAvenger.storyboard; sourceTree = "<group>"; };
 		9152DFC9245D0D7000F94294 /* DetailAvengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAvengerViewController.swift; sourceTree = "<group>"; };
 		9152DFCB245D0E1100F94294 /* DetailBatle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailBatle.storyboard; sourceTree = "<group>"; };
+		91698265245F00DB0075D646 /* EditPowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPowerViewController.swift; sourceTree = "<group>"; };
+		91698267245F3B120075D646 /* AddBatleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBatleViewController.swift; sourceTree = "<group>"; };
+		91698269245F42410075D646 /* AddBatle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddBatle.storyboard; sourceTree = "<group>"; };
+		9169826B245F47460075D646 /* SelectAvengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAvengerViewController.swift; sourceTree = "<group>"; };
+		9169826D245FA9710075D646 /* BatleViiewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatleViiewCollection.swift; sourceTree = "<group>"; };
 		917A162324597B6F00BB7030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		917A162524597CD900BB7030 /* Superheroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Superheroes.json; path = Assets.xcassets/Superheroes/Superheroes.json; sourceTree = "<group>"; };
 		917A162724597CE500BB7030 /* Villains.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Villains.json; path = Assets.xcassets/Villain/Villains.json; sourceTree = "<group>"; };
@@ -160,9 +170,12 @@
 			children = (
 				91146242245778C900F9351D /* SuperheroesViewController.swift */,
 				91146244245778C900F9351D /* VillainsViewController.swift */,
+				9152DFC9245D0D7000F94294 /* DetailAvengerViewController.swift */,
+				91698265245F00DB0075D646 /* EditPowerViewController.swift */,
 				911462762457A27A00F9351D /* BatlesViewController.swift */,
 				9152DFC5245CFD3300F94294 /* DetailBatleViewController.swift */,
-				9152DFC9245D0D7000F94294 /* DetailAvengerViewController.swift */,
+				91698267245F3B120075D646 /* AddBatleViewController.swift */,
+				9169826B245F47460075D646 /* SelectAvengerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +186,7 @@
 				91146246245778C900F9351D /* Main.storyboard */,
 				9152DFC7245CFD7900F94294 /* DetailAvenger.storyboard */,
 				9152DFCB245D0E1100F94294 /* DetailBatle.storyboard */,
+				91698269245F42410075D646 /* AddBatle.storyboard */,
 				9114624E245778CA00F9351D /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -183,6 +197,7 @@
 			children = (
 				917A162B245980C900BB7030 /* AvengerViewCell.swift */,
 				9152DFC3245CEDEE00F94294 /* BatleViewCell.swift */,
+				9169826D245FA9710075D646 /* BatleViiewCollection.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -248,6 +263,7 @@
 				917A162824597CE500BB7030 /* Villains.json in Resources */,
 				91146250245778CA00F9351D /* LaunchScreen.storyboard in Resources */,
 				9152DFC8245CFD7900F94294 /* DetailAvenger.storyboard in Resources */,
+				9169826A245F42410075D646 /* AddBatle.storyboard in Resources */,
 				9152DFCC245D0E1100F94294 /* DetailBatle.storyboard in Resources */,
 				917A162624597CD900BB7030 /* Superheroes.json in Resources */,
 				91146248245778C900F9351D /* Main.storyboard in Resources */,
@@ -263,16 +279,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9152DFC2245CCEDE00F94294 /* BatleModel.swift in Sources */,
+				91698268245F3B120075D646 /* AddBatleViewController.swift in Sources */,
 				917A162C245980C900BB7030 /* AvengerViewCell.swift in Sources */,
 				9114626424577FA700F9351D /* DataProvider.swift in Sources */,
 				911462772457A27A00F9351D /* BatlesViewController.swift in Sources */,
 				9114627524579D3500F9351D /* AvengerModel.swift in Sources */,
 				91146245245778C900F9351D /* VillainsViewController.swift in Sources */,
 				91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */,
+				9169826E245FA9710075D646 /* BatleViiewCollection.swift in Sources */,
 				9152DFCA245D0D7000F94294 /* DetailAvengerViewController.swift in Sources */,
 				9114626F245788D700F9351D /* AvengerTeam.swift in Sources */,
 				9152DFC6245CFD3300F94294 /* DetailBatleViewController.swift in Sources */,
+				91698266245F00DB0075D646 /* EditPowerViewController.swift in Sources */,
 				9114623F245778C900F9351D /* AppDelegate.swift in Sources */,
+				9169826C245F47460075D646 /* SelectAvengerViewController.swift in Sources */,
 				9114626D2457854800F9351D /* DataBase.swift in Sources */,
 				9152DFC4245CEDEE00F94294 /* BatleViewCell.swift in Sources */,
 				911462672457826A00F9351D /* AvengersApp.xcdatamodeld in Sources */,

@@ -11,6 +11,4 @@ import Foundation
 struct BatleModel: Codable {
 
     let id : Int16
-    let winner : String
-    let loser : String
 }

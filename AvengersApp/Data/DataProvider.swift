@@ -58,13 +58,19 @@ class DataProvider {
     func loadAvengerBy(team: AvengerTeam) -> [Avenger] {
         return database?.fetchDataBy(team: team.rawValue) as? [Avenger] ?? []
     }
-    func loadBtaleBy(id: Int16) -> [Batle] {
-        return database?.fetchDataBatleBy(id: id) as? [Batle] ?? []
+    func loadBtaleBy(superhero: Avenger) -> [Batle] {
+        return database?.fetchDataBatleBy(superhero: superhero) as? [Batle] ?? []
+    }
+    func loadBtaleBy(villain: Avenger) -> [Batle] {
+        return database?.fetchDataBatleBy(villain: villain) as? [Batle] ?? []
     }
     
     //MARK: Delete:
     func deleteAvenger(_ avenger: Avenger) {
         database?.delete(data: [avenger])
+    }
+    func deleteBatle(_ batle: Batle) {
+        database?.delete(data: [batle])
     }
     
 }

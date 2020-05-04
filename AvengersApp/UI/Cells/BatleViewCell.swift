@@ -13,7 +13,8 @@ class BatleViewCell: UITableViewCell {
     static let cellIdentifier: String = String(describing: BatleViewCell.self)
     
     @IBOutlet weak var cellView: UIView!
-    @IBOutlet weak var batleTitle: UILabel!
+    
+    @IBOutlet weak var titleBatle: UITextView!
     @IBOutlet weak var superheroImg: UIImageView!
     @IBOutlet weak var villainImg: UIImageView!
      
@@ -61,11 +62,15 @@ class BatleViewCell: UITableViewCell {
         villainImg.layer.shadowOffset = CGSize.zero
         villainImg.layer.shadowRadius = 4.0
         villainImg.layer.shadowOpacity = 0.8
-        
+        superheroImg.layer.borderWidth = 4
+        superheroImg.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
+        villainImg.layer.borderWidth = 4
+        villainImg.layer.borderColor = CGColor(srgbRed: 0, green: 0, blue: 0, alpha: 1)
     }
     
     // MARK: Private methods
         private func update(batleTitle: Int16) {
+            titleBatle.text = "Batalla \(batleTitle)"
             
         }
         private func update (superhero: String?) {
