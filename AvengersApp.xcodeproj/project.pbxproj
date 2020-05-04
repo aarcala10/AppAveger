@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9112559724608B1E0038376C /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9112559624608B1E0038376C /* TabViewController.swift */; };
 		9114623F245778C900F9351D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9114623E245778C900F9351D /* AppDelegate.swift */; };
 		91146241245778C900F9351D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146240245778C900F9351D /* SceneDelegate.swift */; };
 		91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91146242245778C900F9351D /* SuperheroesViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9112559624608B1E0038376C /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		9114623B245778C900F9351D /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9114623E245778C900F9351D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91146240245778C900F9351D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		911462712457958F00F9351D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9112559624608B1E0038376C /* TabViewController.swift */,
 				91146242245778C900F9351D /* SuperheroesViewController.swift */,
 				91146244245778C900F9351D /* VillainsViewController.swift */,
 				9152DFC9245D0D7000F94294 /* DetailAvengerViewController.swift */,
@@ -286,6 +289,7 @@
 				9114627524579D3500F9351D /* AvengerModel.swift in Sources */,
 				91146245245778C900F9351D /* VillainsViewController.swift in Sources */,
 				91146243245778C900F9351D /* SuperheroesViewController.swift in Sources */,
+				9112559724608B1E0038376C /* TabViewController.swift in Sources */,
 				9169826E245FA9710075D646 /* BatleViiewCollection.swift in Sources */,
 				9152DFCA245D0D7000F94294 /* DetailAvengerViewController.swift in Sources */,
 				9114626F245788D700F9351D /* AvengerTeam.swift in Sources */,
